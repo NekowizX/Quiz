@@ -321,7 +321,7 @@ wizLoader = (function() {
         if (typeof r.question === "undefined") {
           return true;
         }
-        if (r.type === "分類題X") {
+        if (r.type === "分類題") {
           return html += '<tr data-pos="XXD" data-type="' + r.type + '"><td class="td-more"><a href="javascript:void(0);" class="btn-more">更多</a></td><td><div class="question">' + wizLoader.highlight(val, r.question) + '</div><div class="text-danger">' + wizLoader.htmlEncode(r.answer).replace(/\n/, "<br />") + '</div></td></tr>';
         } else if (r.type === "連連看X") {
           return html += '<tr data-pos="XXD" data-type="' + r.type + '"><td class="td-more"><a href="javascript:void(0);" class="btn-more">更多</a></td><td><div class="question">' + wizLoader.highlight(val, r.question) + '</div><div class="text-danger">' + wizLoader.htmlEncode(r.answer).replace(/、/g, "<br />") + '</div></td></tr>';
@@ -342,7 +342,7 @@ wizLoader = (function() {
       $("#result-list").html("");
       html = "";
       result.each(function(r) {
-        if (r.type === "分類題X") {
+        if (r.type === "分類題") {
           return html += '<tr data-pos="XXD" data-type="' + r.type + '"><td><div class="question">' + r.question + '</div><div class="text-danger">' + wizLoader.htmlEncode(r.answer).replace(/\n/, "<br />") + '</div></td></tr>';
         } else if (r.type === "連連看X") {
           return html += '<tr data-pos="XXD" data-type="' + r.type + '"><td><div class="question">' + r.question + '</div><div class="text-danger">' + wizLoader.htmlEncode(r.answer).replace(/、/g, "<br />") + '</div></td></tr>';
